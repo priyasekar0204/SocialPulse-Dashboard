@@ -1,45 +1,103 @@
 # SocialPulse – Social Media Analytics Dashboard
 
-A full-stack starter project using React, Node.js, Express, PostgreSQL and Recharts.
+## Project Overview
+
+SocialPulse is a full-stack web application designed to manage social media posts and monitor social media analytics through a simple and interactive dashboard.
 
 ## Features
-- Register and login with JWT authentication
-- Dashboard KPI cards and analytics charts
-- Instagram and X/Twitter demo analytics
-- Create, list and delete scheduled posts
-- Profile endpoint
-- Responsive dashboard UI
 
-## Requirements
-- Node.js 18+
-- PostgreSQL 14+
+* User Registration and Login
+* Secure Authentication
+* Interactive Analytics Dashboard
+* Social Media Statistics and Charts
+* Create and Delete Posts
+* Scheduled Posts Management
+* PostgreSQL Database Integration
+* User Profile Page
 
-## 1. Database setup
-Create a PostgreSQL database:
-```sql
-CREATE DATABASE socialpulse;
+## Technologies Used
+
+**Frontend:**
+
+* React.js
+* Vite
+* CSS
+* Recharts
+
+**Backend:**
+
+* Node.js
+* Express.js
+* JWT Authentication
+
+**Database:**
+
+* PostgreSQL
+
+## Project Structure
+
+```text
+SocialPulse/
+├── backend/
+│   ├── middleware/
+│   ├── db.js
+│   ├── server.js
+│   └── package.json
+├── frontend/
+│   ├── src/
+│   ├── index.html
+│   └── package.json
+├── .gitignore
+└── README.md
 ```
 
-## 2. Backend setup
+## Installation and Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/priyasekar0204/SocialPulse-Dashboard.git
+```
+
+### 2. Backend Setup
+
 ```bash
 cd backend
-cp .env.example .env
 npm install
+```
+
+Create a `.env` file using `.env.example` and configure the database URL and JWT secret.
+
+### 3. Database Setup
+
+* Install PostgreSQL.
+* Create a database named `socialpulse`.
+* Configure the database connection in the `.env` file.
+
+### 4. Start Backend
+
+```bash
 npm run dev
 ```
-Update `backend/.env` with your PostgreSQL username/password. The server creates the required tables and demo analytics data automatically on first start.
 
-## 3. Frontend setup
-Open a second terminal:
+Backend runs at `http://localhost:5000`.
+
+### 5. Frontend Setup
+
+Open another terminal:
+
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
-Open the URL printed by Vite (normally http://localhost:5173).
 
-## Demo
-Register a new account from the login screen. Dashboard analytics use clearly labelled sample data until real platform API credentials are connected.
+Frontend runs at `http://localhost:5173`.
 
-## Real Instagram / X API note
-Real publishing and account analytics require approved Meta / X developer apps, access tokens and platform permissions. This project does not pretend to connect to real accounts; it includes an API-ready backend structure and demo data.
+## Note
+
+The analytics dashboard currently uses sample/demo data. Real Instagram and X API integration is not included in this version.
+
+## Project Status
+
+Basic full-stack functionality implemented and tested.
